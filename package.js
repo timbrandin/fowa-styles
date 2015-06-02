@@ -41,7 +41,6 @@ Package.onUse(function(api) {
     'lib/client/main.html',
     'lib/client/chaparall.css',
     'lib/client/styles.css',
-    'lib/client/autoscroll.js',
-    'public/NewMessage.ogg'
+    'lib/client/autoscroll.js'
   ], 'client');
 });
