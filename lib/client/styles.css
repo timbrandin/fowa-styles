@@ -60,6 +60,7 @@ textarea {
   font-size: 14px;
   resize: none !important;
   outline: none;
+  font-family: chaparral-pro, sans-serif;
 }
 
 textarea:focus {
