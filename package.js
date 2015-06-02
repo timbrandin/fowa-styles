@@ -16,9 +16,11 @@ Package.onUse(function(api) {
     'accounts-password',
     'mobile-status-bar@1.0.3',
     'mongo',
+    'jquery',
     'momentjs:moment@2.10.3',
     'templating',
     'tmeasday:gravatar@0.0.4',
+    'aldeed:template-extension@3.4.3'
   ];
 
   api.use(packages);
@@ -29,6 +31,7 @@ Package.onUse(function(api) {
 
   api.addFiles([
     'lib/client/main.html',
-    'lib/client/styles.css'
+    'lib/client/styles.css',
+    'lib/client/autoscroll.js'
   ], 'client');
 });
