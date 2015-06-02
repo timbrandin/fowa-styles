@@ -15,7 +15,6 @@ Package.onUse(function(api) {
   var packages = [
     'standard-app-packages',
     'service-configuration',
-    'application-configuration',
     'accounts-ui',
     'accounts-base',
     'accounts-password',
