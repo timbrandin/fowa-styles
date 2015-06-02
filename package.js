@@ -8,9 +8,27 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
 
-  api.use('mongo');
-  api.use('tmeasday:gravatar@0.0.4');
+  var packages = [
+    'standard-app-packages',
+    'service-configuration',
+    'accounts-ui',
+    'accounts-base',
+    'accounts-password',
+    'mobile-status-bar@1.0.3',
+    'mongo',
+    'momentjs:moment@2.10.3',
+    'templating',
+    'tmeasday:gravatar@0.0.4',
+  ];
 
-  api.addFiles('styles.js');
-  api.addFiles('styles.css', 'client');
+  api.use(packages);
+
+  api.imply(packages);
+
+  api.addFiles('lib/server/profile-pictures.js', 'server');
+
+  api.addFiles([
+    'lib/client/main.html',
+    'lib/client/styles.css'
+  ], 'client');
 });
