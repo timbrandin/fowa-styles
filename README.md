@@ -1,1 +1,1 @@
-Styling and avatars for Future Insights Live – Las Vegas 2015
+Styling and avatars for Future of Web Apps – London 2015
