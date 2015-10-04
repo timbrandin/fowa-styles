@@ -1,7 +1,7 @@
 Package.describe({
-  name: 'filive:style',
+  name: 'fowa:style',
   version: '1.0.0',
-  summary: 'Styling for FILIVE 2015',
+  summary: 'Styling for Future of Web Apps in London 2015',
   documentation: 'README.md'
 });
 

@@ -1,3 +1,7 @@
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
 body {
   font-family: chaparral-pro, sans-serif;
   font-weight: 400;
@@ -37,21 +41,26 @@ li .message-header {
 }
 
 li .time {
+  color: #888;
   font-size: 11px;
   text-transform: uppercase;
   font-weight: normal;
 }
 
-form {
+li .user {
+  font-weight: 600;
+}
+
+footer {
   width: 100%;
   box-sizing: border-box;
   position: fixed;
   background: #000;
   bottom: 0;
-  padding: 14px 16px 8px;
+  padding: 14px 16px 14px;
 }
 
-textarea {
+.textarea {
   background: #4D4D4D;
   padding: 8px 8px 6px;
   width: 100%;
@@ -66,34 +75,46 @@ textarea {
   font-family: chaparral-pro, sans-serif;
 }
 
-textarea:focus {
+.textarea:focus {
   background: white;
 }
 
 #login-buttons {
   position: fixed;
   top: 0;
+  right: 0;
+  width: auto;
   display: block;
-  width: 100%;
 }
 
 .accounts-dialog * {
-  font-family: chaparral-pro,sans-serif;
+  /*font-family: chaparral-pro,sans-serif;*/
+  font-family: VanCondensedPro,sans-serif;
+}
+
+#login-buttons a, .accounts-dialog a {
+  text-decoration: none;
 }
 
 .accounts-dialog .additional-link {
-  font-size: 14px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+#login-buttons #signup-link {
+  float: none;
 }
 
 .login-link-and-dropdown-list {
-  background: #00ADEF;
+  background: rgb(255, 132, 0);
   color: white;
   display: inline-block;
-  padding: 16px;
+  padding: 1em;
   text-transform: uppercase;
-  font-size: 1.33333rem;
-  line-height: 1.2;
+  font-size: 1.2rem;
+  line-height: 1.7;
   float: right;
+  width: auto;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -102,15 +123,16 @@ textarea:focus {
   user-select: none;
 }
 
-#login-buttons.login-buttons-dropdown-align-right #login-dropdown-list {
+#login-buttons #login-dropdown-list {
+  left: initial;
   right: 12px;
   top: 8px;
-  padding: 30px 20px 20px;
+  padding: 2em 2em 2em;
   border: none;
   box-shadow: none;
   height: 1000px;
   background: black;
-  color: white;
+  color: rgb(153, 153, 153);
   border-radius: 0;
 }
 
@@ -119,34 +141,37 @@ textarea:focus {
   float: none;
 }
 
-#login-dropdown-list .login-button {
+#login-dropdown-list .login-button,
+#login-dropdown-list .login-button:active {
   text-align: left;
   font-family: VanCondensedPro,sans-serif;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  padding: 22px 0 20px 32px;
+  font-size: 1.66667rem;
   line-height: 1.2;
-  font-weight: 300;
-  background: none;
+  font-weight: normal;
+  background: rgb(255, 132, 0);
+  border-radius: 0;
   border: none;
-  padding: 0;
+  margin: 20px -32px 16px -32px;
 }
 
-#login-dropdown-list .login-button-form-submit {
-  font-size: 1.5rem;
-}
-
-#login-dropdown-list a,
 #login-dropdown-list .login-button:hover {
-  background: none;
-  color: #00ADEF;
+  background: rgba(255, 132, 0, 0.5);
+}
+
+#login-dropdown-list a:hover {
+  color: white;
 }
 
 #login-dropdown-list label {
   font-family: VanCondensedPro,sans-serif;
-  font-size: 14px;
+  font-size: 16px;
+  color: white;
 }
 
-#login-dropdown-list .login-close-text {
+#login-dropdown-list .login-close-text,
+#login-dropdown-list .login-close-text:hover {
   color: transparent;
   text-indent: -9999px;
   position: absolute;
@@ -165,7 +190,7 @@ textarea:focus {
 }
 
 #login-dropdown-list .login-close-text:hover:before {
-  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path fill="#00ADEF" d="M1.772 1.296c-.41-.447-1.074-.447-1.483 0-.409.448-.409 1.173 0 1.62l4.178 4.563-4.178 4.564c-.409.447-.409 1.173 0 1.62.205.224.474.335.742.335.269 0 .537-.111.742-.335l4.918-5.373c.196-.215.307-.507.307-.811 0-.304-.11-.594-.307-.809l-4.919-5.374zm8.42 12.33c.41.447 1.074.447 1.483 0 .409-.448.409-1.173 0-1.62l-4.178-4.563 4.178-4.564c.409-.447.409-1.173 0-1.62-.205-.224-.474-.335-.742-.335-.269 0-.537.111-.742.335l-4.918 5.373c-.196.215-.307.507-.307.811 0 .304.11.594.307.809l4.919 5.374z"></path></svg>') no-repeat;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 12 14" xmlns="http://www.w3.org/2000/svg"><path fill="rgb(255, 132, 0)" d="M1.772 1.296c-.41-.447-1.074-.447-1.483 0-.409.448-.409 1.173 0 1.62l4.178 4.563-4.178 4.564c-.409.447-.409 1.173 0 1.62.205.224.474.335.742.335.269 0 .537-.111.742-.335l4.918-5.373c.196-.215.307-.507.307-.811 0-.304-.11-.594-.307-.809l-4.919-5.374zm8.42 12.33c.41.447 1.074.447 1.483 0 .409-.448.409-1.173 0-1.62l-4.178-4.563 4.178-4.564c.409-.447.409-1.173 0-1.62-.205-.224-.474-.335-.742-.335-.269 0-.537.111-.742.335l-4.918 5.373c-.196.215-.307.507-.307.811 0 .304.11.594.307.809l4.919 5.374z"></path></svg>') no-repeat;
 }
 
 
@@ -177,4 +202,43 @@ textarea:focus {
   padding: 8px;
   color: black;
   margin-bottom: 8px;
+}
+
+.accounts-dialog .error-message {
+  background: rgba(255,255,255, 0.75);
+  padding: 1em 0 0.8em 1em;
+  color: black;
+}
+
+#login-buttons-facebook {
+  font-size: 16px !important;
+  background: rgb(58, 87, 149) !important;
+}
+
+#login-buttons-facebook:active,
+#login-buttons-facebook:hover {
+  font-size: 16px !important;
+  background: rgba(58, 87, 149, 0.75) !important;
+}
+
+#login-buttons-facebook:active {
+  color: white;
+}
+
+#login-buttons .login-image {
+  top: 12px;
+  left: 8px;
+  background-image: url(https://www.facebook.com//rsrc.php/v2/yf/r/aGiLEXRwIuC.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: -53px -37px;
+  display: block;
+  height: 28px;
+  margin: 5px;
+  outline: none;
+  overflow: hidden;
+  text-indent: -999px;
+  white-space: nowrap;
+  width: 28px;
+  z-index: 2;
 }
