@@ -1,6 +1,6 @@
 Package.describe({
   name: 'fowa:style',
-  version: '1.0.0',
+  version: '1.0.1',
   summary: 'Styling for Future of Web Apps in London 2015',
   documentation: 'README.md'
 });
