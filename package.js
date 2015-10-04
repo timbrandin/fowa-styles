@@ -27,13 +27,11 @@ Package.onUse(function(api) {
     'aldeed:template-extension@3.4.3',
     'brentjanderson:buzz@1.1.9'
   ];
-
   api.use(packages);
-
   api.imply(packages);
 
-  api.addFiles('lib/statusbar.js');
 
+  api.addFiles('lib/statusbar.js');
   api.addFiles('lib/server/profile-pictures.js', 'server');
 
   api.addFiles([
